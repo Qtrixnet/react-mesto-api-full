@@ -1,0 +1,17 @@
+.header__button_burger > span,
+.header__button_burger > span::before,
+.header__button_burger > span::after {
+  display: block;
+  position: absolute;
+  width: 24px;
+  height: 3px;
+  background-color: #fff;
+}
+.header__button_burger > span::before {
+  content: '';
+  top: -9px;
+}
+.header__button_burger > span::after {
+  content: '';
+  top: 9px;
+}

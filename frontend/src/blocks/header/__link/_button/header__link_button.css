@@ -1,0 +1,15 @@
+.header__link_button {
+  background-color: transparent;
+  border: 0;
+  font-size: 18px;
+  line-height: 22px;
+  color: rgb(169, 169, 169)
+}
+
+.header__link_button:hover {
+  cursor: pointer;
+}
+
+.header__link_button:focus {
+  outline: 0;
+}

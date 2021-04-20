@@ -1,0 +1,19 @@
+@import url(./__title/register__title.css);
+@import url(./__email-input/register__email-input.css);
+@import url(./__password-input/register__password-input.css);
+@import url(./__button/register__button.css);
+@import url(./__link/register__link.css);
+
+.register {
+    display: flex;
+    flex-direction: column;
+    width: 358px;
+    margin: 60px 0 60px;
+}
+
+@media screen and (max-width: 767px) {
+  .register  {
+    max-width: 260px;
+    margin: 40px 0 0px;
+  }
+}

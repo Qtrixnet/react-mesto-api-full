@@ -1,0 +1,43 @@
+@import url(./__close-button/popup__close-button.css);
+@import url(./__form/popup__form.css);
+@import url(./__input/popup__input.css);
+@import url(./__input/_type_error/popup__input_type_error.css);
+@import url(./__button/popup__button.css);
+@import url(./__button/_confirm/popup__button_confirm.css);
+@import url(./__button/_disabled/popup__button_disabled.css);
+@import url(./__title/popup__title.css);
+@import url(./__title/_confirm/popup__title_confirm.css);
+@import url(./__title/_center/popup__title_center.css);
+@import url(./__fullscreen/popup__fullscreen.css);
+@import url(./__image/popup__image.css);
+@import url(./__image-description/popup__image-description.css);
+@import url(./__image-subtitle/popup__image-subtitle.css);
+@import url(./__set/popup__set.css);
+@import url(./__input-error/popup__input-error.css);
+@import url(./__input-error/_visible/popup__input-error_visible.css);
+@import url(./__form-field/popup__form-field.css);
+@import url(./__info/popup__info.css);
+@import url(./__status/popup__status.css);
+@import url(./__status/_fail/popup__status_fail.css);
+@import url(./__status/_success/popup__status_success.css);
+@import url(./__close-button/_info/popup__close-button_info.css);
+
+.popup {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 3;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .1s linear;
+}
+
+.popup__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}

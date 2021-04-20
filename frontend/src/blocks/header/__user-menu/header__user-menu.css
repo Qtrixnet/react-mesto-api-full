@@ -1,0 +1,15 @@
+.header__user-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 767px) {
+  .header__user-menu {
+    width: 100%;
+    margin: 0 auto 27px;
+    flex-direction: column;
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgba(84, 84, 84, 0.7);
+  }
+}

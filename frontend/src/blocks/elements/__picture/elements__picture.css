@@ -1,0 +1,24 @@
+.elements__picture {
+  height: 282px;
+  width: 100%;
+  align-self: flex-start;
+  z-index: 1;
+  color: black;
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-sizing: border-box;
+  transition: all .1s ease-in;
+  background: #01b7ff;
+  background: url("../../../images/Logo-white.svg"), linear-gradient(120deg, #ffffff 0%, #dadadaea 50%, #acacace7 100%);
+  background-size: 20%, contain;
+  background-repeat: no-repeat;
+  background-position: 97% 97%;
+  object-fit: cover;
+}
+
+.elements__picture:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  transform: scale(1.2);
+}

@@ -1,0 +1,22 @@
+.profile__avatar-edit {
+  padding: 0;
+  margin: 0;
+  margin-right: 30px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.profile__avatar-edit:hover > .profile__avatar-edit-button {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+@media screen and (max-width: 1023px) {
+  .profile__avatar-edit {
+    margin: 0 0 14px;
+  }
+}

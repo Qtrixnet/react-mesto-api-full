@@ -1,0 +1,22 @@
+.popup__image {
+  min-width: 25vw;
+  min-height: 25vh;
+  max-width: 75vw;
+  max-height: 75vh;
+  margin: 0;
+  z-index: 3;
+  color: white;
+  border-radius: 5px;
+  background: rgb(115, 160, 223);
+  background: url("../../../images/Logo-white.svg"), linear-gradient(120deg, #ffffff 0%, #dadadaea 50%, #acacace7 100%);
+  background-size: 20%, contain;
+  background-repeat: no-repeat;
+  background-position: 97% 97%;
+}
+
+@media screen and (max-width: 767px) {
+  .popup__image {
+    min-width: 80vw;
+    max-height: 50vh;
+  }
+}

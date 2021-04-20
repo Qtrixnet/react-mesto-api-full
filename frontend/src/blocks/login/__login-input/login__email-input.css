@@ -1,0 +1,16 @@
+.login__email-input {
+  background-color: transparent;
+  color: #fff;
+  border: 0;
+  border-bottom: 2px solid #ccc;
+  outline: 0;
+  padding: 13px 0 13px;
+  margin: 0;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.login__email-input::placeholder {
+  color: #ccc;
+}
+

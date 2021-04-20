@@ -1,0 +1,21 @@
+.profile__info {
+  max-width: 920px;
+  display: grid;
+  align-items: baseline;
+  grid-template-columns: 1fr 24px;
+  margin-right: 15px;
+  column-gap: 17px;
+  row-gap: 16px;
+  grid-template-areas:
+    "name edit-button"
+    "job job";
+}
+
+@media screen and (max-width: 767px) {
+  .profile__info {
+    grid-template-columns: 1fr 18px;
+    column-gap: 7px;
+    row-gap: 14px;
+    margin-right: 0;
+  }
+}

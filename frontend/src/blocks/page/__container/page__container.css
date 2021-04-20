@@ -1,0 +1,11 @@
+.page__container {
+  margin: auto;
+  max-width: 1280px;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  min-height: 100vh;
+}

@@ -1,0 +1,39 @@
+@import url(./__logo/header__logo.css);
+@import url(./__link/header__link.css);
+@import url(./__email/header__email.css);
+@import url(./__user-menu/header__user-menu.css);
+@import url(./__link/_button/header__link_button.css);
+@import url(./__burger-menu/header__burger-menu.css);
+@import url(./__button/header__button.css);
+@import url(./__button/_close/header__button_close.css);
+@import url(./__button/_burger/header__button_burger.css);
+@import url(./__link/_login/header__link_login.css);
+
+.header {
+  padding: 45px 0 41px;
+  width: 70%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(84, 84, 84, 0.7);
+  position: relative;
+}
+
+@media screen and (max-width: 1023px) {
+  .header {
+    padding: 28px 27px 31px;
+  }
+
+  .header::after {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    padding: 28px 0 31px;
+    width: 100%;
+    flex-direction: column-reverse;
+  }
+}

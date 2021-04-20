@@ -1,0 +1,18 @@
+@import url(./__title/login__title.css);
+@import url(./__login-input/login__email-input.css);
+@import url(./__password-input/login__password-input.css);
+@import url(./__button/login__button.css);
+
+.login {
+    display: flex;
+    flex-direction: column;
+    width: 358px;
+    margin: 60px 0 112px;
+}
+
+@media screen and (max-width: 767px) {
+  .login {
+    max-width: 260px;
+    margin: 40px 0 0px;
+  }
+}

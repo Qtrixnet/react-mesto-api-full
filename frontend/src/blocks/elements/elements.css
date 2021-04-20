@@ -1,0 +1,30 @@
+@import url(./__like-button/elements__like-button.css);
+@import url(./__delete-button/elements__delete-button.css);
+@import url(./__delete-button/_visible/elements__delete-button_visible.css);
+@import url(./__delete-button/_hidden/elements__delete-button_hidden.css);
+@import url(./__list-item/elements__list-item.css);
+@import url(./__list/elements__list.css);
+@import url(./__picture/elements__picture.css);
+@import url(./__text/elements__text.css);
+@import url(./__container/elements__container.css);
+@import url(./__like-button/_active/elements__like-button_active.css);
+@import url(./__like-container/elements__like-container.css);
+@import url(./__like-counter/elements__like-counter.css);
+
+.elements {
+  padding: 0 15%;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+@media screen and (max-width: 1279px) {
+  .elements {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .elements {
+    padding: 0;
+  }
+}
