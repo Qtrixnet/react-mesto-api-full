@@ -1,4 +1,4 @@
-export const baseUrl = "http://localhost:3000";
+export const baseUrl = "https://api.mesto-qtrixnet.nomore.nomoredomains.club";
 
 export const register = (email, password) => {
   return fetch(`${baseUrl}/signup`, {
@@ -28,23 +28,6 @@ export const login = (email, password) => {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({ email, password })
-  })
-  .then(res => {
-    if (res.ok) {
-      return res.json();
-    }
-    return Promise.reject(`Ошибка: ${res.status}`);
-  })
-};
-
-export const checkToken = (token) => {
-  return fetch(`${baseUrl}/users/me`, {
-    method: 'GET',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${token}`
-    },
   })
   .then(res => {
     if (res.ok) {

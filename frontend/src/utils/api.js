@@ -2,7 +2,6 @@
 class Api {
   constructor(data) {
     this._baseUrl = data.serverUrl;
-    this._token = `Bearer ${localStorage.getItem('jwt')}`;
   }
 
   //* Проверка статуса запроса
@@ -20,7 +19,7 @@ class Api {
   getUserInfo() {
     return fetch(`${this._baseUrl}/users/me`, {
       headers: {
-        authorization: this._token,
+        authorization: `Bearer ${localStorage.getItem('jwt')}`,
       },
     }).then((res) => this._requestResult(res));
   }
@@ -29,7 +28,7 @@ class Api {
   getInitialCards() {
     return fetch(`${this._baseUrl}/cards`, {
       headers: {
-        authorization: this._token,
+        authorization: `Bearer ${localStorage.getItem('jwt')}`,
       },
     }).then((res) => this._requestResult(res));
   }
@@ -38,7 +37,7 @@ class Api {
     return fetch(`${this._baseUrl}/users/me/avatar`, {
       method: "PATCH",
       headers: {
-        authorization: this._token,
+        authorization: `Bearer ${localStorage.getItem('jwt')}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
@@ -52,7 +51,7 @@ class Api {
     return fetch(`${this._baseUrl}/users/me`, {
       method: "PATCH",
       headers: {
-        authorization: this._token,
+        authorization: `Bearer ${localStorage.getItem('jwt')}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
@@ -67,7 +66,7 @@ class Api {
     return fetch(`${this._baseUrl}/cards`, {
       method: "POST",
       headers: {
-        authorization: this._token,
+        authorization: `Bearer ${localStorage.getItem('jwt')}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
@@ -82,7 +81,7 @@ class Api {
     return fetch(`${this._baseUrl}/cards/${data}`, {
       method: "DELETE",
       headers: {
-        authorization: this._token,
+        authorization: `Bearer ${localStorage.getItem('jwt')}`,
       },
     }).then((res) => this._requestResult(res));
   }
@@ -92,14 +91,14 @@ class Api {
     return fetch(`${this._baseUrl}/cards/${cardId}/likes`, {
       method: !isLiked ? "PUT" : "DELETE",
       headers: {
-        authorization: this._token,
+        authorization: `Bearer ${localStorage.getItem('jwt')}`,
       },
     }).then((res) => this._requestResult(res));
   }
 }
 
 const api = new Api({
-  serverUrl: "http://localhost:3000",
+  serverUrl: "https://api.mesto-qtrixnet.nomore.nomoredomains.club",
 });
 
 export default api;

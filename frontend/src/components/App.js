@@ -47,9 +47,9 @@ function App() {
 
   //* Проверка токена и авторизация пользователя
   useEffect(() => {
-    const jwt = localStorage.getItem('jwt');
+    const jwt = localStorage.getItem('jwt')
     if (jwt) {
-      auth.checkToken(jwt)
+      api.getUserInfo()
         .then(data => {
           if (data) {
             setProfileEmail(data.email)
@@ -185,9 +185,9 @@ function App() {
       .then(res => {
         if (res.token) {
           setProfileEmail(email)
-          setLoggedIn(true);
           localStorage.setItem('jwt', res.token);
-          history.push('/')
+          setLoggedIn(true);
+          history.push('/');
         }
       })
       .catch(err => {
