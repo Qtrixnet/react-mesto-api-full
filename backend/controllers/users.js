@@ -1,7 +1,4 @@
-//* файл .env не выгружаю, но в нем записаны следующие данные:
-//* NODE_ENV=production, JWT_SECRET = 'super-strong-secret'
-
-const { NODE_ENV, JWT_SECRET = 'dev-key' } = process.env;
+const { JWT_SECRET = 'dev-key' } = process.env;
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../models/user');
@@ -111,8 +108,7 @@ const login = (req, res, next) => {
       if (!user) {
         throw new NotFoundError('Пользователь по указанному _id не найден.');
       } else {
-        const token = jwt.sign({ _id: user._id }, NODE_ENV === 'production' ? JWT_SECRET : 'dev-key', { expiresIn: '7d' });
-        console.log(process.env.JWT_SECRET);
+        const token = jwt.sign({ _id: user._id }, JWT_SECRET, { expiresIn: '7d' });
         res.send({ token });
       }
     })
